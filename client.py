@@ -12,7 +12,7 @@ print(screensize)
 
 import pygame
 
-ip = '192.168.86.204'
+ip = 'PUT YOUR IP HERE'
 
 WIDTH = screensize[0]
 HEIGHT = screensize[1]

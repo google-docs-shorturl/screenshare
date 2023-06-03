@@ -1,13 +1,9 @@
-# file for person viewing the screenshare 
+# code for the person displaying the screenshare
 
 import socket
 from zlib import decompress
 
 import pygame
-
-WIDTH = 500
-HEIGHT = 500
-
 
 def recvall(conn, length):
     """ Retreive all pixels. """
@@ -28,6 +24,9 @@ def main(host='0.0.0.0', port=6969):
     sock.listen(5)
     conn, addr = sock.accept()
     print("Accepted ....", addr)
+    _data = conn.recv(1024).decode('utf-8').split('x')
+    WIDTH = int(_data[0])
+    HEIGHT = int(_data[1])
 
     pygame.init()
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -53,6 +52,8 @@ def main(host='0.0.0.0', port=6969):
             screen.blit(img, (0, 0))
             pygame.display.flip()
             clock.tick(60)
+			#uncomment to show fps
+            #print(clock.get_fps())
     finally:
         print("PIXELS: ", pixels)
         sock.close()

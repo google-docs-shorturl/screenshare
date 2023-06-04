@@ -31,7 +31,7 @@ This is a Python project that allows you to share your screen over a network usi
 
 ### Server (Screen-sharing host)
 
-1. Run the client script:
+1. Run the server script:
 
    ```shell
    python server.py
@@ -48,6 +48,8 @@ This is a Python project that allows you to share your screen over a network usi
    ```
 
 2. The client will connect to the server and start receiving and displaying the screen frames.
+
+If you are unsure of the IP address of the client, run client.py and it will show you.
 
 ## Customization
 

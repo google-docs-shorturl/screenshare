@@ -5,6 +5,7 @@ from zlib import decompress
 
 import pygame
 
+hostname=socket.gethostname()
 print('IP Address: ' + str(socket.gethostbyname(hostname)))
 
 def recvall(conn, length):

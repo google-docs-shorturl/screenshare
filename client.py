@@ -5,6 +5,8 @@ from zlib import decompress
 
 import pygame
 
+print('IP Address: ' + str(socket.gethostbyname(hostname)))
+
 def recvall(conn, length):
     """ Retreive all pixels. """
     buf = b''

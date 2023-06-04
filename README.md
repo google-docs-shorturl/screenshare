@@ -29,15 +29,7 @@ This is a Python project that allows you to share your screen over a network usi
 
 ## Usage
 
-### Server (Screen-sharing host)
-
-1. Run the server script:
-
-   ```shell
-   python server.py
-   ```
-
-2. The client will start running and display the IP address.
+Always make sure to run client.py first.
 
 ### Client (Screen-sharing Viewer)
 
@@ -48,6 +40,16 @@ This is a Python project that allows you to share your screen over a network usi
    ```
 
 2. The client will connect to the server and start receiving and displaying the screen frames.
+
+### Server (Screen-sharing host)
+
+1. Run the server script:
+
+   ```shell
+   python server.py
+   ```
+
+2. The client will start running and display the IP address.
 
 If you are unsure of the IP address of the client, run client.py and it will show you.
 

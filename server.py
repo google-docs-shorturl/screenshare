@@ -12,7 +12,7 @@ print(screensize)
 
 import pygame
 
-ip = 'PUT YOUR IP HERE'
+ip = 'PUT IP DISPLAYED WHEN RUNNING client.py HERE'
 
 WIDTH = screensize[0]
 HEIGHT = screensize[1]
